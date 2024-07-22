@@ -2,7 +2,7 @@
 const losProductos = [
   {
     id: "1",
-    url: "/images/american.burger.jpg",
+    url: "/public/american.burger.jpg",
     nombre: "Americana",
     descripcion: "doble medallon,lechuga,tomate,jamon,tibo,huevo",
     precio: "2500",
@@ -10,7 +10,7 @@ const losProductos = [
   },
   {
     id: "2",
-    url: "/images/la.blue.jpg",
+    url: "/public/la.blue.jpg",
     nombre: "Queso Azul",
     descripcion: "doble medallon,rokefort,cebolla,mozzarella,bacon",
     precio: "2800",
@@ -18,7 +18,7 @@ const losProductos = [
   },
   {
     id: "3",
-    url: "/images/burger.bros.jpg",
+    url: "/public/burger.bros.jpg",
     nombre: "HM burger",
     descripcion: "doble medallon,cheddar,provoleta,tomates confitados",
     precio: "3200",
@@ -26,7 +26,7 @@ const losProductos = [
   },
   {
     id: "4",
-    url: "/images/full.began.jpg",
+    url: "/public/full.began.jpg",
     nombre: "Veggie",
     descripcion: "medallon de lenteja,cheddar,tomate,lechuga,tibo",
     precio: "2500",
@@ -34,7 +34,7 @@ const losProductos = [
   },
   {
     id: "5",
-    url: "/images/papas.jpg",
+    url: "/public/papas.jpg",
     nombre: "Papas Fritas",
     descripcion: "porcion de fritas simple",
     precio: "1700",
@@ -42,7 +42,7 @@ const losProductos = [
   },
   {
     id: "6",
-    url: "/images/papas-cheddar-jamon.jpg",
+    url: "/public/papas-cheddar-jamon.jpg",
     nombre: "Papas Bacon",
     descripcion: "porcion de fritas c/ cheddar y bacon",
     precio: "1700",
@@ -50,7 +50,7 @@ const losProductos = [
   },
   {
     id: "7",
-    url: "/images/papas-chedar-carne.jpg",
+    url: "/public/papas-chedar-carne.jpg",
     nombre: "Papas HM",
     descripcion: "porcion de fritas c/ cheddar y carne en trozos",
     precio: "1700",
@@ -58,7 +58,7 @@ const losProductos = [
   },
   {
     id: "8",
-    url: "/images/papas-americanas.jpg",
+    url: "/public/papas-americanas.jpg",
     nombre: "Papas Americanas",
     descripcion: "porcion de fritas corte americanas",
     precio: "1700",
@@ -66,28 +66,31 @@ const losProductos = [
   },
   {
     id: "9",
-    url: "/images/pepsi.jpg",
+    url: "/public/pepsi.jpg",
     nombre: "Pepsi",
     descripcion: "",
     precio: "1700",
     categoria: "bebidas",
-  },  {
+  },
+  {
     id: "10",
-    url: "/images/7up.jpeg",
+    url: "/public/7up.jpeg",
     nombre: "7UP",
     descripcion: "",
     precio: "1700",
     categoria: "bebidas",
-  },  {
+  },
+  {
     id: "11",
-    url: "/images/ipa.jpg",
+    url: "/public/ipa.jpg",
     nombre: "Patagonia IPA",
     descripcion: "elaborada con trigo y lúpulo",
     precio: "1700",
     categoria: "bebidas",
-  },  {
+  },
+  {
     id: "12",
-    url: "/images/agua.con.gas.jpg",
+    url: "/public/agua.con.gas.jpg",
     nombre: "Agua S/GAS",
     descripcion: "agua mineral eco de los andes",
     precio: "1700",
@@ -96,14 +99,13 @@ const losProductos = [
 ];
 const productos = document.querySelector(".div-cards");
 const buttonCategory = document.querySelectorAll(".button-category");
-const selectProduct = document.querySelector("#productSelect")
+const selectProduct = document.querySelector("#productSelect");
 /*CARRITO*/
 const carritoList = document.querySelector(".list-carrito");
 const carrito = [];
 const total = document.querySelector(".div-total-final");
 const carritoHidde = document.querySelector(".button-show-carrito");
 const comprasHidde = document.querySelector("#compras-carrito");
-
 
 /*PRODUCTOS-CARDS*/
 function cards(productosFiltrados) {
@@ -164,23 +166,21 @@ losProductos.sort((a,b) => {
   }
 
 })
-*/ 
-
+*/
 
 /*EVENTOS-BUTTON */
 carritoHidde.addEventListener("click", () => {
   const currentDisplay = comprasHidde.style.display;
-if (currentDisplay === "none") {
+  if (currentDisplay === "none") {
     comprasHidde.style.display = "block";
   } else {
     comprasHidde.style.display = "none";
   }
 });
 document.addEventListener("click", (e) => {
-
   const btnAgregar = document.querySelectorAll(".btnAgregar");
   const btnEliminar = document.querySelectorAll(".btnEliminar");
-  
+
   btnAgregar.forEach((btn) => {
     if (e.target == btn) {
       const id = parseInt(e.target.id);
@@ -196,7 +196,7 @@ document.addEventListener("click", (e) => {
       eliminarDelCarrito(id);
       totalCarrito();
     }
-  }); 
+  });
 });
 
 /*BOTON SCROLL MAIN*/
@@ -210,17 +210,15 @@ scrollButton.addEventListener("click", () => {
 
 /*CARRITO*/
 function totalCarrito() {
-  total.innerHTML = ""
-  if(carrito <1){
+  total.innerHTML = "";
+  if (carrito < 1) {
+  } else {
+    const totalFinal = carrito.reduce(
+      (acc, producto) => acc + producto.precio * producto.cantidad,
+      0
+    );
+    total.innerHTML += `<p class="total">Total:$${totalFinal}</p>`;
   }
-  else{
-     const totalFinal = carrito.reduce(
-    (acc, producto) => acc + producto.precio * producto.cantidad,
-    0
-  );
-  total.innerHTML += `<p class="total">Total:$${totalFinal}</p>` ;
-  }
- 
 }
 
 function agregarAlCarrito(producto) {
@@ -248,18 +246,17 @@ function eliminarDelCarrito(id) {
     carrito.splice(index, 1);
   }
   reenderizarCarrito();
-  totalCarrito()
+  totalCarrito();
   localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
 function reenderizarCarrito() {
-  if(carrito == 0){
-    carritoList.innerHTML=`<p class="carrito-txt">No hay productos en el carrito.</p>`
-  }
-  else{
-      carritoList.innerHTML = "";
-  carrito.forEach((producto) => {
-    carritoList.innerHTML += ` <li class="producto-carrito">
+  if (carrito == 0) {
+    carritoList.innerHTML = `<p class="carrito-txt">No hay productos en el carrito.</p>`;
+  } else {
+    carritoList.innerHTML = "";
+    carrito.forEach((producto) => {
+      carritoList.innerHTML += ` <li class="producto-carrito">
     <img src="${producto.url}" alt="" class="img-producto">
     <div class="div-padre-carrito">
     <div class="div-producto-carrito">
@@ -276,7 +273,7 @@ function reenderizarCarrito() {
    </div>
    </div>
    </li>`;
-  });
+    });
   }
 }
 
