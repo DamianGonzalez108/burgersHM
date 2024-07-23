@@ -2,7 +2,7 @@
 const losProductos = [
   {
     id: "1",
-    url: "/public/american.burger.jpg",
+    url: "../public/american.burger.jpg",
     nombre: "Americana",
     descripcion: "doble medallon,lechuga,tomate,jamon,tibo,huevo",
     precio: "2500",
@@ -10,7 +10,7 @@ const losProductos = [
   },
   {
     id: "2",
-    url: "/public/la.blue.jpg",
+    url: "../public/la.blue.jpg",
     nombre: "Queso Azul",
     descripcion: "doble medallon,rokefort,cebolla,mozzarella,bacon",
     precio: "2800",
@@ -18,7 +18,7 @@ const losProductos = [
   },
   {
     id: "3",
-    url: "/public/burger.bros.jpg",
+    url: "../public/burger.bros.jpg",
     nombre: "HM burger",
     descripcion: "doble medallon,cheddar,provoleta,tomates confitados",
     precio: "3200",
@@ -26,7 +26,7 @@ const losProductos = [
   },
   {
     id: "4",
-    url: "/public/full.began.jpg",
+    url: "../public/full.began.jpg",
     nombre: "Veggie",
     descripcion: "medallon de lenteja,cheddar,tomate,lechuga,tibo",
     precio: "2500",
@@ -34,7 +34,7 @@ const losProductos = [
   },
   {
     id: "5",
-    url: "/public/papas.jpg",
+    url: "../public/papas.jpg",
     nombre: "Papas Fritas",
     descripcion: "porcion de fritas simple",
     precio: "1700",
@@ -42,7 +42,7 @@ const losProductos = [
   },
   {
     id: "6",
-    url: "/public/papas-cheddar-jamon.jpg",
+    url: "../public/papas-cheddar-jamon.jpg",
     nombre: "Papas Bacon",
     descripcion: "porcion de fritas c/ cheddar y bacon",
     precio: "1700",
@@ -50,7 +50,7 @@ const losProductos = [
   },
   {
     id: "7",
-    url: "/public/papas-chedar-carne.jpg",
+    url: "../public/papas-chedar-carne.jpg",
     nombre: "Papas HM",
     descripcion: "porcion de fritas c/ cheddar y carne en trozos",
     precio: "1700",
@@ -58,7 +58,7 @@ const losProductos = [
   },
   {
     id: "8",
-    url: "/public/papas-americanas.jpg",
+    url: "../public/papas-americanas.jpg",
     nombre: "Papas Americanas",
     descripcion: "porcion de fritas corte americanas",
     precio: "1700",
@@ -66,7 +66,7 @@ const losProductos = [
   },
   {
     id: "9",
-    url: "/public/pepsi.jpg",
+    url: "../public/pepsi.jpg",
     nombre: "Pepsi",
     descripcion: "",
     precio: "1700",
@@ -74,7 +74,7 @@ const losProductos = [
   },
   {
     id: "10",
-    url: "/public/7up.jpeg",
+    url: "../public/7up.jpeg",
     nombre: "7UP",
     descripcion: "",
     precio: "1700",
@@ -82,7 +82,7 @@ const losProductos = [
   },
   {
     id: "11",
-    url: "/public/ipa.jpg",
+    url: "../public/ipa.jpg",
     nombre: "Patagonia IPA",
     descripcion: "elaborada con trigo y lúpulo",
     precio: "1700",
@@ -90,7 +90,7 @@ const losProductos = [
   },
   {
     id: "12",
-    url: "/public/agua.con.gas.jpg",
+    url: "../public/agua.con.gas.jpg",
     nombre: "Agua S/GAS",
     descripcion: "agua mineral eco de los andes",
     precio: "1700",
