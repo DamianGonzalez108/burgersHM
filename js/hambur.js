@@ -114,7 +114,7 @@ function cards(productosFiltrados) {
     productos.innerHTML += `
   <div class="cartas">
       <div class="div-images">
-        <img src="${producto.url}" alt="imagenes-del-menu" class="imgs-cards">
+        <img src=${producto.url} alt="imagenes-del-menu" class="imgs-cards">
       </div>
           <div class="div-txt">
           <div class="div-tittle-precio">
@@ -257,7 +257,7 @@ function reenderizarCarrito() {
     carritoList.innerHTML = "";
     carrito.forEach((producto) => {
       carritoList.innerHTML += ` <li class="producto-carrito">
-    <img src="${producto.url}" alt="" class="img-producto">
+    <img src=${producto.url} alt="" class="img-producto">
     <div class="div-padre-carrito">
     <div class="div-producto-carrito">
     <div class="nombre-cantidad-carrito">
