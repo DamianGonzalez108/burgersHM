@@ -2,7 +2,7 @@
 const losProductos = [
   {
     id: "1",
-    img: "../../proyectHM/imagenes/americanburger.jpg",
+    img: "./imagenes/americanburger.jpg",
     nombre: "Americana",
     descripcion: "doble medallon,lechuga,tomate,jamon,tibo,huevo",
     precio: "2500",
@@ -10,7 +10,7 @@ const losProductos = [
   },
   {
     id: "2",
-    img: "../imagenes/lablue.jpg",
+    img: "./imagenes/lablue.jpg",
     nombre: "Queso Azul",
     descripcion: "doble medallon,rokefort,cebolla,mozzarella,bacon",
     precio: "2800",
@@ -18,7 +18,7 @@ const losProductos = [
   },
   {
     id: "3",
-    img: "../imagenes/burgerbros.jpg",
+    img: "./imagenes/burgerbros.jpg",
     nombre: "HM burger",
     descripcion: "doble medallon,cheddar,provoleta,tomates confitados",
     precio: "3200",
@@ -26,7 +26,7 @@ const losProductos = [
   },
   {
     id: "4",
-    img: "../imagenes/fullbegan.jpg",
+    img: "./imagenes/fullbegan.jpg",
     nombre: "Veggie",
     descripcion: "medallon de lenteja,cheddar,tomate,lechuga,tibo",
     precio: "2500",
@@ -34,7 +34,7 @@ const losProductos = [
   },
   {
     id: "5",
-    img: "../imagenes/papas.jpg",
+    img: "./imagenes/papas.jpg",
     nombre: "Papas Fritas",
     descripcion: "porcion de fritas simple",
     precio: "1700",
@@ -42,7 +42,7 @@ const losProductos = [
   },
   {
     id: "6",
-    img: "../imagenes/papascheddarjamon.jpg",
+    img: "./imagenes/papascheddarjamon.jpg",
     nombre: "Papas Bacon",
     descripcion: "porcion de fritas c/ cheddar y bacon",
     precio: "1700",
@@ -50,7 +50,7 @@ const losProductos = [
   },
   {
     id: "7",
-    img: "../imagenes/papaschedarcarne.jpg",
+    img: "./imagenes/papaschedarcarne.jpg",
     nombre: "Papas HM",
     descripcion: "porcion de fritas c/ cheddar y carne en trozos",
     precio: "1700",
@@ -58,7 +58,7 @@ const losProductos = [
   },
   {
     id: "8",
-    img: "../imagenes/papasamericanas.jpg",
+    img: "./imagenes/papasamericanas.jpg",
     nombre: "Papas Americanas",
     descripcion: "porcion de fritas corte americanas",
     precio: "1700",
@@ -66,7 +66,7 @@ const losProductos = [
   },
   {
     id: "9",
-    img: "../imagenes/pepsi.jpg",
+    img: "./imagenes/pepsi.jpg",
     nombre: "Pepsi",
     descripcion: "",
     precio: "1700",
@@ -74,7 +74,7 @@ const losProductos = [
   },
   {
     id: "10",
-    img: "../imagenes/7up.jpeg",
+    img: "./imagenes/7up.jpeg",
     nombre: "7UP",
     descripcion: "",
     precio: "1700",
@@ -82,7 +82,7 @@ const losProductos = [
   },
   {
     id: "11",
-    img: "../imagenes/ipa.jpg",
+    img: "./imagenes/ipa.jpg",
     nombre: "Patagonia IPA",
     descripcion: "elaborada con trigo y lúpulo",
     precio: "1700",
@@ -90,7 +90,7 @@ const losProductos = [
   },
   {
     id: "12",
-    img: "../imagenes/aguacongas.jpg",
+    img: "./imagenes/aguacongas.jpg",
     nombre: "Agua S/GAS",
     descripcion: "agua mineral eco de los andes",
     precio: "1700",
@@ -111,10 +111,10 @@ const comprasHidde = document.querySelector("#compras-carrito");
 function cards(productosFiltrados) {
   productos.innerHTML = "";
   productosFiltrados.forEach((producto) => {
-    productos.innerHTML += `
+    productos.innerHTML += ` 
   <div class="cartas">
       <div class="div-images">
-        <img src=${producto.img} alt="imagenes-del-menu" class="imgs-cards">
+        <img src="${producto.img}" alt="imagenes-del-menu" class="imgs-cards">
       </div>
           <div class="div-txt">
           <div class="div-tittle-precio">
@@ -257,7 +257,7 @@ function reenderizarCarrito() {
     carritoList.innerHTML = "";
     carrito.forEach((producto) => {
       carritoList.innerHTML += ` <li class="producto-carrito">
-    <img src=${producto.img} alt="" class="img-producto">
+    <img src="${producto.img}" alt="" class="img-producto">
     <div class="div-padre-carrito">
     <div class="div-producto-carrito">
     <div class="nombre-cantidad-carrito">
