@@ -2,7 +2,7 @@
 const losProductos = [
   {
     id: "1",
-    img: "../imagenes/americanburger.jpg",
+    img: "../../proyectHM/imagenes/americanburger.jpg",
     nombre: "Americana",
     descripcion: "doble medallon,lechuga,tomate,jamon,tibo,huevo",
     precio: "2500",
