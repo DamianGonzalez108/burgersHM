@@ -99,8 +99,7 @@ const losProductos = [
 ];
 const productos = document.querySelector(".div-cards");
 const buttonCategory = document.querySelectorAll(".button-category");
-/* const selectProduct = document.querySelector("#productSelect");
-*/
+const selectProduct = document.querySelector("#productSelect");
 /*CARRITO*/
 const carritoList = document.querySelector(".list-carrito");
 const carrito = [];
