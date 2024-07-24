@@ -99,7 +99,6 @@ const losProductos = [
 ];
 const productos = document.querySelector(".div-cards");
 const buttonCategory = document.querySelectorAll(".button-category");
-const selectProduct = document.querySelector("#productSelect");
 /*CARRITO*/
 const carritoList = document.querySelector(".list-carrito");
 const carrito = [];
@@ -118,10 +117,12 @@ function cards(productosFiltrados) {
       </div>
           <div class="div-txt">
           <div class="div-tittle-precio">
-            <h5 class="card-title titulo-cartas">${producto.nombre}</h5>
-            <p class="card-text cartas-precio">$${producto.precio}</p>
+            <h5 class="titulo-cartas">${producto.nombre}</h5>
+            <p class="cartas-precio">$${producto.precio}</p>
+          </div>
+          <div class="divDescripcionTxt">
+            <p class="descripcion-txt">${producto.descripcion}</p>
           </div>  
-            <p class="card-text descripcion-txt">${producto.descripcion}</p>
           <div class="div-btn-agregar">
             <button id="${producto.id}" class="btnAgregar">Agregar</button>
           </div>            
@@ -153,20 +154,6 @@ buttonCategory.forEach((boton) => {
     }
   });
 });
-
-/* ORDEN DE PRODUCTOS */
-/*   
-function reenderizarselect (){
-const masRelevante = document.querySelector(".mas-relevante")
-}
- 
-losProductos.sort((a,b) => {
-  if(a.precio < b.precio){
-    return -1
-  }
-
-})
-*/
 
 /*EVENTOS-BUTTON */
 carritoHidde.addEventListener("click", () => {
@@ -203,7 +190,7 @@ document.addEventListener("click", (e) => {
 const scrollButton = document.querySelector("#scroll-button");
 scrollButton.addEventListener("click", () => {
   window.scrollTo({
-    top: 700,
+    top: 590,
     behavior: "smooth",
   });
 });
@@ -298,7 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
       position: "right", // `left`, `center` or `right`
       stopOnFocus: true, // Prevents dismissing of toast on hover
       style: {
-        background: "linear-gradient(to right, #00b09b, #96c93d)",
+        background: "#2d2c36",
       },
       onClick: function () {}, // Callback after click
     }).showToast();
