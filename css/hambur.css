@@ -492,7 +492,7 @@ main {
     font-size: 11px;
   }
   .img-main {
-    height: 20%;
+    height: 15%;
     width: 80%;
   }
   .texto-main {
@@ -550,7 +550,7 @@ main {
     font-size: 15px;
   }
   .cartas {
-    height: 11vh;
+    height: 10vh;
   }
   .btnEliminar {
     width: 45%;
@@ -577,12 +577,22 @@ main {
     font-size: 12px;
   }
   .img-main {
-    height: 15%;
+    height: 10%;
     width: 100%;
   }
   .button-category {
     margin: 0px 1px;
     font-size: 7px;
     padding: 1px;
+  }
+  .cartas {
+    height: 8vh;
+  }
+  .btnAgregar {
+    font-size: 7px;
+  }
+  .titulo-cartas,
+  .cartas-precio {
+    font-size: 7px;
   }
 }
